@@ -7,6 +7,10 @@ tags:
  - websocket
 ---
 
+> 这是一个简单的基于php Swoole扩展实现的聊天室demo。
+
+<!-- more -->
+
 ## 环境准备
 
 ### 安装swoole
@@ -14,6 +18,7 @@ tags:
 ```bash
 pecl install swoole
 ```
+
 ### 准备好jQuery.js
 
 ## websocket_server.php
