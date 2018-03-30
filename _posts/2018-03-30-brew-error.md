@@ -26,6 +26,7 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 Error: Failure while executing: git config --local --replace-all homebrew.private true
 ```
 
+<!-- more -->
 
 ## 解决办法
 

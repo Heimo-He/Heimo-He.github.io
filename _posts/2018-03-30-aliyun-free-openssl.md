@@ -12,6 +12,8 @@ tags: http
 
 购买成功选择**文件形式**，**自动生成csr**
 
+<!-- more -->
+
 ## 支付成功后
 
 ![Alt text](https://ws1.sinaimg.cn/large/005H70QEgy1fpupe4p1l3j30b10903zp.jpg)
