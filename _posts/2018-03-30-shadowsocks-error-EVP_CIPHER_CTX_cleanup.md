@@ -1,5 +1,5 @@
 ---
-title: shadowsocks2.8.2启动报undefined symbol: EVP_CIPHER_CTX_cleanup错误
+title: shadowsocks2.8.2启动报undefined symbol:EVP_CIPHER_CTX_cleanup错误
 categories: youknow
 tags: 
  - youknow
