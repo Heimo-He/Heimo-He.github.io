@@ -1,12 +1,11 @@
 ---
-title: shadowsocks2.8.2启动报undefined symbol:EVP_CIPHER_CTX_cleanup错误
+title: shadowsocks2.8.2EVP_CIPHER_CTX_cleanup错误
 categories: youknow
 tags: 
  - youknow
  - linux
 ---
 
-#shadowsocks2.8.2启动报undefined symbol: EVP_CIPHER_CTX_cleanup错误
 
 > 由于openssl升级到1.1.0以上版本，导致shadowsocks2.8.2启动报undefined symbol: EVP_CIPHER_CTX_cleanup错误
 
