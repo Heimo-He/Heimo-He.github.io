@@ -5,8 +5,8 @@
 
 # Site
 title: Heimo's blog
-subtitle: 玫瑰即玫瑰，花香无意义
-description:
+subtitle: 
+description: 玫瑰即玫瑰，花香无意义
 author: Heimo
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -117,10 +117,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   #about: /about/
-  archives: /archives/
   tags: /tags/
+  archives: /archives/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -232,7 +232,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/_user_head_pic.png
 
 
 # Table Of Contents in the Sidebar
@@ -255,8 +255,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -345,7 +345,7 @@ post_copyright:
 #   image: url-of-image   - Images's url
 custom_logo:
   enabled: false
-  image:
+  image: 
 
 
 # Code Highlight theme
@@ -372,7 +372,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 9620abf1dc2ac51ff5d8f4e1d8a13667
 
 # Duoshuo ShortName
 #duoshuo_shortname:
