@@ -283,11 +283,12 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  小余和岁岁的个人博客: http://www.sunyyl.com
+  嘿嘿的博客: http://www.heihei.ink
 
 
 # ---------------------------------------------------------------
