@@ -5,6 +5,7 @@ tags: youknow
 ---
 
 > 锐速不支持Openvz。
+
 > 如果内核版本在4.9以上可以[ >> 开启bbr](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)，不使用锐速。
 
 <!-- more -->

@@ -6,7 +6,7 @@ tags:
  - php
 ---
 
-nextcloud安装完成后出现：“PHP 似乎没有设置好查询的系统环境变量。 用 getenv(\"PATH\") 测试只返回一个空值。“
+> nextcloud安装完成后出现：“PHP 似乎没有设置好查询的系统环境变量。 用 getenv(\"PATH\") 测试只返回一个空值。“
 
 <!-- more -->
 

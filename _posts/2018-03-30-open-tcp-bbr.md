@@ -7,6 +7,7 @@ tags:
 ---
 
 > bbr是google在4.9版本之后加入的tcp阻塞算法，可以很好的为ss加速。
+
 > 4.9以下内核版本可[ >> 安装锐速](https://heimo-he.github.io/youknow/2018/03/30/shadowsocks/serverSpeeder/)为ss加速。
 
 <!-- more -->
