@@ -1,5 +1,5 @@
 ---
-titile: PHP 似乎没有设置好查询的系统环境变量。 用 getenv(\"PATH\") 测试只返回一个空值
+titile: PHP用getenv(\"PATH\")测试只返回一个空值
 categories: php
 tags: 
  - nextcloud
