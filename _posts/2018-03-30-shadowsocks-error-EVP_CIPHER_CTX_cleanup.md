@@ -1,11 +1,10 @@
 ---
 title: shadowsocks2.8.2EVP_CIPHER_CTX_cleanup错误
 categories: youknow
-tags: 
+tags:
  - youknow
  - linux
 ---
-
 
 > 由于openssl升级到1.1.0以上版本，导致shadowsocks2.8.2启动报undefined symbol: EVP_CIPHER_CTX_cleanup错误
 
@@ -44,13 +43,18 @@ Traceback (most recent call last):
 
 ## 解决办法
 
-1.`sudo vim /home/heimo/.local/lib/python2.7/site-packages/shadowsocks/crypto/openssl.py`
+### 修改site-packages/shadowsocks/crypto/openssl.py
 
+```bash
+sudo vim /home/heimo/.local/lib/python2.7/site-packages/shadowsocks/crypto/openssl.py
+```
 
 所有`EVP_CIPHER_CTX_cleanup`改为`EVP_CIPHER_CTX_reset`
 
+### 修改dist-packages/shadowsocks/crypto/openssl.py
 
-2.`sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py`
-
+```bash
+sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
+```
 
 所有`EVP_CIPHER_CTX_cleanup`改为`EVP_CIPHER_CTX_reset`
