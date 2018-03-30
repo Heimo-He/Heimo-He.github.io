@@ -1,9 +1,9 @@
 ---
 title: 开启 TCP BBR
-categories: you know
+categories: youknow
 tags: 
  - linux
- - you know
+ - youknow
 ---
 
 ## 检查内核
