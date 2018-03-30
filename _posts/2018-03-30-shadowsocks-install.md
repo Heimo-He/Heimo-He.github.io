@@ -5,7 +5,9 @@ tags: youknow
 ---
 
 > 考虑性能，这里只提供Python版本安装方法
+
 > 操作系统为Debian，centos等请使用yum安装
+
 > 同时这里提供了两种优化tcp阻塞的解决办法，为ss加速
 
 <!-- more -->
@@ -59,6 +61,7 @@ ssserver -c /etc/shadowsocks/config.json -d stop
 ## 优化tcp
 
 考虑到tcp阻塞问题，这里有两个解决办法：
+
 1.内核版本为4.9以上的，可以选择[ >> 开启bbr](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)
 
 2.vps虚拟化技术不是openvz的，内核版本达不到4.9，可以选择[ >> 安装锐速](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)
