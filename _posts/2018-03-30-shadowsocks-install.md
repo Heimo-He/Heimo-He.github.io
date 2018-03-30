@@ -4,11 +4,9 @@ categories: youknow
 tags: youknow
 ---
 
-> 考虑性能，这里只提供Python版本安装方法
-
-> 操作系统为Debian，centos等请使用yum安装
-
-> 同时这里提供了两种优化tcp阻塞的解决办法，为ss加速
+> 考虑性能，这里只提供Python版本安装方法。
+> 操作系统为Debian，centos等请使用yum安装。
+> 同时这里提供了两种优化tcp阻塞的解决办法，为ss加速。
 
 <!-- more -->
 
