@@ -7,9 +7,9 @@ tags:
  - php
 ---
 
-## 引入phpoffice/phpexcel**
+## 引入phpoffice/phpexcel
 
-github地址：https://github.com/PHPOffice/PHPExcel
+[github地址](https://github.com/PHPOffice/PHPExcel)
 
 在controller中引用
 
@@ -19,7 +19,7 @@ use PHPExcel_IOFactory;
 
 <!-- more -->
 
-## controller部分**
+## controller部分
 
 {% highlight php linenos %}
     // 批量添加用户数据(备注:)
