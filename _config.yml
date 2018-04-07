@@ -435,8 +435,8 @@ gitalk:
 #duoshuo_share: true
 
 # Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters/
-#google_site_verification:
+# See: https://www.google.com/webmasters
+google_site_verification: 0ACbccHrphf0inbltaMSOhc78ExPGgrlINgbVa5NWOI
 
 # Google Analytics
 #google_analytics:
