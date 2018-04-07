@@ -123,7 +123,7 @@ menu:
   tags: /tags/
   archives: /archives/
   idea: /idea/
-  sitemap: /sitemap.xml
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
