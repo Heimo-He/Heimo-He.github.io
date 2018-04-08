@@ -9,6 +9,8 @@ tags:
 
 > 这是一个简单的基于php Swoole扩展实现的聊天室demo。
 
+[github地址](https://github.com/Heimo-He/webIM)
+
 <!-- more -->
 
 ## 前言-浅析websocket
