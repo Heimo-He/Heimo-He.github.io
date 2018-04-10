@@ -65,3 +65,8 @@ lsmod | grep bbr
 ```
 tcp_bbr                20480  0
 ```
+
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)***

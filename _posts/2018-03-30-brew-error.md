@@ -33,3 +33,7 @@ Error: Failure while executing: git config --local --replace-all homebrew.privat
 ```bash
 xcode-select --install
 ```
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/http/2018/03/30/brew-error/](https://heimo-he.github.io/http/2018/03/30/brew-error/)***

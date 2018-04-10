@@ -23,3 +23,8 @@ tags:
 ```
 
 ## 重启php-fpm
+
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/php/2018/03/30/nextcloud-error-getenv/](https://heimo-he.github.io/php/2018/03/30/nextcloud-error-getenv/)***

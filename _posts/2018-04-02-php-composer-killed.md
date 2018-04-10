@@ -21,3 +21,7 @@ Killed
 - **解决办法**
 
 内存过小，加大虚拟机内存
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/php/2018/04/02/php-composer-killed/](https://heimo-he.github.io/php/2018/04/02/php-composer-killed/)***

@@ -51,3 +51,7 @@ server{
 浏览器输入域名即可访问，没有域名用ip访问
 
 ![enter image description here](https://ws1.sinaimg.cn/large/005H70QEgy1fo6vfvt1dcj30kn0bxab4.jpg)
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/http/2018/03/30/build-nextcloud/](https://heimo-he.github.io/http/2018/03/30/build-nextcloud/)***

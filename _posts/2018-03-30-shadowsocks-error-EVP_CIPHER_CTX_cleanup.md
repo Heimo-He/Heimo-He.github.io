@@ -58,3 +58,7 @@ sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 ```
 
 所有`EVP_CIPHER_CTX_cleanup`改为`EVP_CIPHER_CTX_reset`
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-error-EVP_CIPHER_CTX_cleanup/](https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-error-EVP_CIPHER_CTX_cleanup/)***

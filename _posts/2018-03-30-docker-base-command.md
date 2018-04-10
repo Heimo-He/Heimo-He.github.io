@@ -73,3 +73,7 @@ docker rmi <image id>
 ```
 docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/linux/2018/03/30/docker-base-command/](https://heimo-he.github.io/linux/2018/03/30/docker-base-command/)***

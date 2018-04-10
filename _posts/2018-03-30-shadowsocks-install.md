@@ -65,3 +65,7 @@ ssserver -c /etc/shadowsocks/config.json -d stop
 1.内核版本为4.9以上的，可以选择[ >> 开启bbr](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)
 
 2.vps虚拟化技术不是openvz的，内核版本达不到4.9，可以选择[ >> 安装锐速](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)
+
+
+
+> ***转载使用注明出处。原文链接 ![https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-install/](https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-install/)***
