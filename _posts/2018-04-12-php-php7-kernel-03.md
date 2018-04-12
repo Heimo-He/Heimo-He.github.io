@@ -38,11 +38,8 @@ php的整个生命周期被划分为以下几个阶段：
 	- 设置一些 util 函数句柄（如 zend_error_cb、zend_printf、zend_write 等）；
 	- 设置 Zend 虚拟机编译、执行器的函数句柄 zend_compile_file、zend_execute_ex，以及垃圾回收的函数句柄gc_collect_cycles；
 	- 分配函数符号表（CG(function_table)）、类符号表（CG(class_table)）、常量符号表（EG(zend_constants)）等，如果是多线程的话，还会分配编译器、执行器的全局变量；
-	- 注册 Zend 核心扩展：zend_startup_builtin_functions()，这个扩展是内核提供的，该
-过程将注册Zend核心扩展提供的函数，比如strlen、define、func_get_args、class_exists
-等；
-	- 注册 Zend 定义的标准常量：zend_register_standard_constants()，比如：E_ERROR、
-E_WARNING、E_ALL、TRUE、FALSE 等；
+	- 注册 Zend 核心扩展：zend_startup_builtin_functions()，这个扩展是内核提供的，该过程将注册Zend核心扩展提供的函数，比如strlen、define、func_get_args、class_exists 等；
+	- 注册 Zend 定义的标准常量：zend_register_standard_constants()，比如：E_ERROR、E_WARNING、E_ALL、TRUE、FALSE 等；
 	- 注册$GLOBALS 超全局变量的获取 handler；
 	- 分配 php.ini 配置的存储符号表：EG(ini_directives)。
 - 注册 PHP 定义的常量：PHP_VERSION、PHP_ZTS、PHP_SAPI，等等。

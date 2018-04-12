@@ -9,13 +9,9 @@ tags:
 php源码下有几个主要目录：sapi、main、Zend、ext、TSRM
 
 - sapi：应用接口层
-
 - main：php主要的代码
-
 - Zend：php解析器的主要实现，即ZendVM，它是php代码的核心实现，php代码的解释，执行就是由Zend完成的。
-
 - ext：php的扩展目录
-
 - TSRM：线程安全的相关实现
 
 <!-- more -->
@@ -37,7 +33,6 @@ PHP提供很多种形式的接口，包括apache、apache2filter、apache2handle
 ZendVM是一个虚拟的计算机，它介于PHP应用和实际计算机中间。它是php语言的核心实现，主要由两部分组成：
 
 - 编译器：负责将php代码解释为执行器可执行的指令
-
 - 执行器：负责执行编译器解释出的指令
 
 ZendVM的角色等价于JVM，它们都是抽象出来的虚拟计算机，与C/C++这类编译型语言不同，虚拟机上运行的指令并不是机器指令。虚拟机的优点是跨平台，主需要按照不通的平台编译出对应的解析器就可以实现代码的跨平台执行。
@@ -53,5 +48,4 @@ ZendVM的角色等价于JVM，它们都是抽象出来的虚拟计算机，与C/
 
 
 > 本文整理于《PHP7内核剖析》
-
 > ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-02/](https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-02/)***
