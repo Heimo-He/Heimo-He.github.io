@@ -29,4 +29,4 @@ zend_extension="opcache.so"
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/youknow/2018/03/30/php-open-opcache/](https://heimo-he.github.io/youknow/2018/03/30/php-open-opcache/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/03/30/php-open-opcache/](https://heimo-he.github.io/php/2018/03/30/php-open-opcache/)***
