@@ -50,3 +50,45 @@ php的整个生命周期被划分为以下几个阶段：
 - 注册动态加载的扩展：php_ini_register_extensions()，将 php.ini 中配置的扩展加载到 PHP中。
 - 回调各扩展定义的 module starup 钩子函数，即通过 PHP_MINIT_FUNCTION()定义的函数。
 - 注册 php.ini 中禁用的函数、类：disable_functions、disable_classes。
+
+### 请求初始化阶段（request startup）
+
+这个阶段是每个请求处理前都会经历的一个阶段，对于Fpm而言，是在worker进程accept一个请求且读取、解析完请求数据后的一个阶段。这个阶段的处理函数为php_request_startup()。
+
+![](https://ws1.sinaimg.cn/large/005H70QEgy1fq9xef919bj30dm08vmyj.jpg)
+
+主要的处理有以下几个。
+- 激活输出：php_output_activate()。
+- 激活 Zend 引擎：zend_activate()，主要操作如下所述。
+	- 重置垃圾回收器：gc_reset()；
+	- 初始化编译器：init_compiler()；
+	- 初始化执行器：init_executor()，将 EG(function_table)、EG(class_table)分别指向CG(function_table)、CG(class_table)，所以在 PHP 的编译、执行期间，EG(function_table)与 CG(function_table)、EG(class_table)与 CG(class_table)是同一个值；另外还会初始化全局变量符号表 EG(symbol_table)、include 过的文件符号表EG(included_files)；
+	- 初始化词法扫描器：startup_scanner()。
+- 激活 SAPI：sapi_activate()。
+- 回调各扩展定义的 request startup 钩子函数：zend_activate_modules()。
+
+### 执行脚本阶段（execute script）
+
+这个阶段包括php代码的编译，执行两个核心阶段，这也是Zend引擎最重要的功能。在编译阶段，php脚本将经历
+
+php源码->抽象语法树->opline指令
+
+的转化过程，最终生成的opline指令就是Zend引擎可以识别的执行指令，这些指令接着再被执行器执行，这就是php代码解释执行的过程。这个阶段的入口的函数为php_execute_script()。
+
+![](https://ws1.sinaimg.cn/large/005H70QEgy1fq9xk1mqg8j30dw08tmy9.jpg)
+
+### 请求关闭阶段（request shutdown）
+
+这个阶段将flush输出内容、发送HTTP应答header头、清理全局变量、关闭编译器、关闭执行器等。另外，在该阶段将回调各个扩展的 request shutdown 钩子函数。这个阶段是请求初始化阶段的相反操作，与请求初始化时的处理一一对应。
+
+![](https://ws1.sinaimg.cn/large/005H70QEgy1fq9xn5e9x8j30gf0hp41n.jpg)
+
+### 模块关闭阶段（modules shutdown）
+
+这个阶段在SAPI关闭时执行，与模块初始化阶段相对应。这个阶段主要是进行资源的清理、php各个模块的关闭操作，同时，将回调各个扩展的 module shutdown 钩子函数php_module_shutdown()。
+
+![](https://ws1.sinaimg.cn/large/005H70QEgy1fq9xniffj1j30d408mq52.jpg)
+
+> 本文整理于《PHP7内核剖析》
+
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-03/](https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-03/)***
