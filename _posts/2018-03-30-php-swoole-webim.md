@@ -134,7 +134,7 @@ $ws->set(array(
 
 
 //创建websocket服务器对象，监听0.0.0.0:9502端口
-$ws = new swoole_websocket_server("0.0.0.0", 9501);
+$ws = new swoole_websocket_server("0.0.0.0", 9502);
 
 //监听WebSocket连接打开事件
 $ws->on('open', function ($ws, $request) {
@@ -145,10 +145,12 @@ $ws->on('open', function ($ws, $request) {
 
 //监听WebSocket消息事件
 $ws->on('message', function ($ws, $frame) {
-   foreach($ws->connections as $fd)
+    echo "client-{$frame->fd} send message：".$frame->data."\n";
+    foreach($ws->connections as $fd)
     {
+        echo "push message to client-{$fd} \n";
         $ws->push($fd, $frame->data);
-    } 
+    }
 });
 
 //监听WebSocket连接关闭事件
@@ -188,7 +190,7 @@ $ws->start();
 </body>
 <script type="text/javascript" src="jquery.js"></script>
 <script>
-    var wsServer = 'ws://127.0.0.1:9501';
+    var wsServer = 'ws://websocket_server_ip:9502';
     var websocket = new WebSocket(wsServer);
 
     //打开事件
@@ -252,9 +254,20 @@ $ws->start();
 
 ## 启动服务
 
-```bash
-php websocket_server.php
+1. 修改chat.html中wsServer的配置为自己的配置
+
+```javascript
+    var wsServer = 'ws://websocket_server_ip:9502';
 ```
+
+2. 配置Nginx使用户能够访问到chat.html
+
+3. 启动websocket_server
+
+`sudo php websocket_server.php`
+
+![image](https://github.com/Heimo-He/webIM/raw/master/screenshots/01.gif)
+
 
 ## 访问页面
 
