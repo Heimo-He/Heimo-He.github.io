@@ -49,4 +49,4 @@ ZendVM的角色等价于JVM，它们都是抽象出来的虚拟计算机，与C/
 
 > 本文整理于《PHP7内核剖析》
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-02/](https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-02/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/12/php-php7-kernel-02/](https://heimo-he.github.io/php/2018/04/12/php-php7-kernel-02/)***
