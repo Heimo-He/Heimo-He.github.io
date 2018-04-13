@@ -24,7 +24,7 @@ php各个组成之间的关系如下图所示：
 
 php提供了一个SAPI层以适配不同的应用环境，SAPI可以认为是php的宿主环境。它是整个php框架最外层的部分，它主要负责php框架的初始化工作。PHP通过SAPI提供了一组接口，供应用和PHP内核之间进行数据交互。脚本执行的开始都是以SAPI接口实现开始的。只是不同的SAPI接口实现会完成他们特定的工作。
 
-PHP提供很多种形式的接口，包括apache、apache2filter、apache2handler、caudium、cgi 、cgi-fcgi、cli、cli-server、continuity、embed、isapi、litespeed、milter、nsapi、phttpd pi3web、roxen、thttpd、tux和webjames。但是常用的只有5种形式，CLI/CGI（命令行）、Multiprocess（多进程）、Multithreaded（多线程）、FastCGI和Embedded（内嵌）。
+PHP提供很多种形式的接口，包括apache、apache2filter、apache2handler、caudium、cgi 、cgi-fcgi、cli、cli-server、continuity、embed、isapi、litespeed、milter、nsapi、phttpd、pi3web、roxen、thttpd、tux和webjames。但是常用的只有5种形式，CLI/CGI（命令行）、Multiprocess（多进程）、Multithreaded（多线程）、FastCGI和Embedded（内嵌）。
 
 如果SAPI是个独立的应用程序，那么main函数也将定义在SAPI中。
 
