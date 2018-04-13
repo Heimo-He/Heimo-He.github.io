@@ -36,4 +36,4 @@ xcode-select --install
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/03/30/brew-error/](https://heimo-he.github.io/2018/03/30/brew-error/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/macos/2018/03/30/brew-error/](https://heimo-he.github.io/macos/2018/03/30/brew-error/)***

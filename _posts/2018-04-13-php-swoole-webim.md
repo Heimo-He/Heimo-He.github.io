@@ -1,5 +1,6 @@
 ---
 title: Swoole实现基于websocket的webIM聊天室
+categories: php
 tags:
  - swoole
  - php
@@ -298,4 +299,4 @@ $ws->start();
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/03/30/php-swoole-webim/](https://heimo-he.github.io/2018/03/30/php-swoole-webim/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/03/30/php-swoole-webim/](https://heimo-he.github.io/php/2018/03/30/php-swoole-webim/)***

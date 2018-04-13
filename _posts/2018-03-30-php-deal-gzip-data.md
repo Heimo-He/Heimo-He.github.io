@@ -28,4 +28,4 @@ curl_setopt( self::$ch, CURLOPT_ENCODING, 'gzip' );
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/03/30/php-deal-gzip-data/](https://heimo-he.github.io/2018/03/30/php-deal-gzip-data/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/03/30/php-deal-gzip-data/](https://heimo-he.github.io/php/2018/03/30/php-deal-gzip-data/)***
