@@ -25,4 +25,4 @@ Killed
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/02/php-composer-killed/](https://heimo-he.github.io/php/2018/04/02/php-composer-killed/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/04/02/php-composer-killed/](https://heimo-he.github.io/2018/04/02/php-composer-killed/)***

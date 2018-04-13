@@ -68,4 +68,4 @@ ssserver -c /etc/shadowsocks/config.json -d stop
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-install/](https://heimo-he.github.io/youknow/2018/03/30/shadowsocks-install/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/03/30/shadowsocks-install/](https://heimo-he.github.io/2018/03/30/shadowsocks-install/)***

@@ -82,4 +82,4 @@ HashTable是PHP中强大的array()类型的内部实现结构，也是内核中�
 
 > 本文整理于《PHP7内核剖析》
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-01/](https://heimo-he.github.io/php/2018/04/02/php-php7-kernel-01/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/2018/04/02/php-php7-kernel-01/](https://heimo-he.github.io/2018/04/02/php-php7-kernel-01/)***
