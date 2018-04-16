@@ -266,12 +266,11 @@ $ws->start();
 
 `sudo php websocket_server.php`
 
-![image](https://github.com/Heimo-He/webIM/raw/master/screenshots/01.gif)
-
-
 ## 访问页面
 
 浏览器打开chat.html
+
+![image](https://github.com/Heimo-He/webIM/raw/master/screenshots/01.gif)
 
 ## 构建整个IM需要考虑的问题
 
