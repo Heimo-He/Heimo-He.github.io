@@ -263,7 +263,7 @@ $ws->start();
 
 3. 启动websocket_server
 
-`sudo php websocket_server.php`
+`php websocket_server.php`
 
 ## 访问页面
 
