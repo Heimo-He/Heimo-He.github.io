@@ -92,8 +92,12 @@ Enter passphrase (empty for no passphrase):
 PermitRootLogin：是否运行 root 登陆，同样的改为『no』：
 `PermitRootLogin no`
 
-保存修改，并重启 SSH 服务：Debian/Ubuntu Users:
-`sudo service ssh restartFedora/CentOS:`
+保存修改，并重启 SSH 服务：
+
+**Debian/Ubuntu Users:**
+`sudo service ssh restart`
+
+**Fedora/CentOS:**
 `sudo systemctl restart sshd`
 
 重启后修改才会生效。
