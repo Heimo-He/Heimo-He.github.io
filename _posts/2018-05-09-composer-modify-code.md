@@ -56,7 +56,7 @@ Updating dependencies
 php composer.phar status
 ```
 
-你可以使用 `--verbose` 系列参数（-v|vv|vvv）来获取更详细的详细：
+你可以使用 `--verbose` 系列参数（-v/vv/vvv）来获取更详细的详细：
 
 ```bash
 php composer.phar status -v
