@@ -70,6 +70,7 @@ vendor/seld/jsonlint:
 ### 相关参考资料：
 
 [PHP 开发者该知道的 5 个 Composer 小技巧](https://www.phpcomposer.com/5-features-to-know-about-composer-php/)
+
 [命令行 | Composer 中文文档 | Composer 中文网](http://docs.phpcomposer.com/03-cli.html#status)
  
 
