@@ -1,5 +1,7 @@
 ---
 title: web前端入门-imooc.com
+categories: frontend
+tags: frontend
 ---
 
 ## 必需开发工具[^工具]
