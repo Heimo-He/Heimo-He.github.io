@@ -1,7 +1,8 @@
 ---
 title: web前端入门-imooc.com
 categories: frontend
-tags: frontend
+tags:
+ - frontend
 ---
 
 > **学完这些再根据个人情况选择是否需要学习付费课程，和确定后面的学习方向。这些用来入门web前端足够了。**
