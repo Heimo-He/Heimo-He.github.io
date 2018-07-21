@@ -8,6 +8,8 @@ tags: youknow
 
 > 如果内核版本在4.9以上可以[ >> 开启bbr](https://heimo-he.github.io/youknow/2018/03/30/open-tcp-bbr/)，不使用锐速。
 
+> 作者[ >> github](https://github.com/91yun/serverspeeder/)
+
 <!-- more -->
 
 ## 安装锐速破解版
