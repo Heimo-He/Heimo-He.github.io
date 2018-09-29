@@ -44,4 +44,4 @@ tags:
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/php/2018/09/11/macos-base-command/](https://heimo-he.github.io/php/2018/09/11/macos-base-command/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/macos/2018/09/11/macos-base-command/](https://heimo-he.github.io/macos/2018/09/11/macos-base-command/)***
