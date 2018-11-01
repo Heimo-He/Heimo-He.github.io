@@ -63,4 +63,4 @@ tags:
 
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/macos/2018/11/01/ubuntu-update-gcc/](https://heimo-he.github.io/macos/2018/11/01/ubuntu-update-gcc/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/linux/2018/11/01/ubuntu-update-gcc/](https://heimo-he.github.io/linux/2018/11/01/ubuntu-update-gcc/)***

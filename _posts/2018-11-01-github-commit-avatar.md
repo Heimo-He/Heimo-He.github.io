@@ -12,6 +12,7 @@ tags:
 
 - 如果想修改所有的项目，可直接修改全局配置`git config --global user.email "github邮箱"`
 
+<!-- more -->
 
 
-> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/macos/2018/11/01/github-commit-avatar/](https://heimo-he.github.io/macos/2018/11/01/github-commit-avatar/)***
+> ***转载使用注明出处。原文链接 [https://heimo-he.github.io/git/2018/11/01/github-commit-avatar/](https://heimo-he.github.io/git/2018/11/01/github-commit-avatar/)***
