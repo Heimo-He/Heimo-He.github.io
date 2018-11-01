@@ -16,6 +16,8 @@ tags:
 `sudo apt-get install software-properties-common`
 `sudo apt-get update`
 
+<!-- more -->
+
 ##### 如果是缺失依赖，则需要安装必要的依赖。
 
 `sudo apt-get install software-properties-common`
