@@ -13,7 +13,9 @@ tags:
 ##### 如果报错`add-apt-repository command not found`
 
 `sudo apt-get install python-software-properties`
+
 `sudo apt-get install software-properties-common`
+
 `sudo apt-get update`
 
 <!-- more -->
