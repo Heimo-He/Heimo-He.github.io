@@ -18,16 +18,19 @@ tags:
 - 显示/隐藏Finder隐藏文件，快捷键⇧+⌘+.
 
 `defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder`
+
 `defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder`
 
 - 禁用/启用dashboard:
 
 `defaults write com.apple.dashboard mcx-disabled -bool true && killall Dock`
+
 `defaults write com.apple.dashboard mcx-disabled -bool false && killall Dock`
 
 - 禁止/恢复生成.DS_Store:
 
 `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
+
 `defaults delete com.apple.desktopservices DSDontWriteNetworkStores`
 
 - 删除.DS_Store
