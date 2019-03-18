@@ -11,28 +11,28 @@ tags:
 
 - 在Finder标题栏显示完整路径
 
-`defaults write com. apple. finder. FXShowPosixPathInTitle -bool true`
+`defaults write com.apple.finder.FXShowPosixPathInTitle -bool true`
 
 <!-- more -->
 
 - 显示/隐藏Finder隐藏文件，快捷键⇧+⌘+.
 
-`defaults write com.apple.finder AppleShowAllFiles -bool true ; killall Finder`
-`defaults write com. apple. finder AppleShowAllFiles -bool false ; killall Finder`
+`defaults write com.apple.finder AppleShowAllFiles -bool true; killall Finder`
+`defaults write com.apple.finder AppleShowAllFiles -bool false; killall Finder`
 
 - 禁用/启用dashboard:
 
-`defaults write com. apple. dashboard mcx-disabled -bool true && killall Dock`
-`defaults write com. apple. dashboard mcx-disabled -bool false && killall Dock`
+`defaults write com.apple.dashboard mcx-disabled -bool true && killall Dock`
+`defaults write com.apple.dashboard mcx-disabled -bool false && killall Dock`
 
 - 禁止/恢复生成.DS_Store:
 
-`defaults write com. apple.desktopservices DSDontWriteNetworkStores true`
-`defaults delete com. apple. desktopservices DSDontWriteNetworkStores`
+`defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
+`defaults delete com.apple.desktopservices DSDontWriteNetworkStores`
 
 - 删除.DS_Store
 
-`sudo find / -name " .DS_ Store" -depth -exec rm {} \;`
+`sudo find /path -name ".DS_Store" -depth -exec rm {} \;`
 
 - 允许从任何来源安装应用
 
@@ -40,7 +40,7 @@ tags:
 
 - 查看CPU信息:
 
-`sysctl -n machdep.cpu.brand_ string`
+`sysctl -n machdep.cpu.brand_string`
 
 
 
