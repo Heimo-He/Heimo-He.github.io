@@ -259,7 +259,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
+  position: right
   # position: right
 
   # Sidebar Display, available value:
@@ -267,8 +267,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
+  display: always
+  #display: post
   #display: hide
   #display: remove
 
