@@ -87,7 +87,7 @@ keywords: "Jekyll, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2017
 
 # icon between year and author @Footer
 authoricon: heart
@@ -384,8 +384,8 @@ baidu_analytics: 9620abf1dc2ac51ff5d8f4e1d8a13667
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: heimo-blog
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
