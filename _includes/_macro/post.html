@@ -239,6 +239,14 @@
                   {{ post.content | number_of_words | divided_by: 200 }}
                 </span>
               {% endif %}
+
+              {% if theme.leancloud_visitors.enable %}
+              &nbsp; | &nbsp;
+              <span id="{{ url_for(post.path) }}"class="leancloud_visitors" data-flag-title="{{ post.title }}">
+                      &nbsp;{{__('post.visitors')}}
+                      </span>
+              {% endif %}
+              
             </div>
           {% endif %}
 
