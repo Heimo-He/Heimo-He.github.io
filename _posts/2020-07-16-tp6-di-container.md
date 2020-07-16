@@ -67,15 +67,13 @@ class Foo{
 }
 ```
 
-##### 自动注入
-
-- **使用invoke助手函数**
+##### 使用invoke助手函数
 
 ```php
 $bar = invoke('namespace\Bar');
 ```
 
-- **操作方法中传参**
+##### 操作方法注入
 
 ```php
 //假设Foo为Controller，index为操作方法
