@@ -25,13 +25,13 @@ gitlab也不使用这里的mysql服务，比较独立，很吃内存，mysql可�
 <!-- more -->
 
 
-### 一、准备工作
+### 准备工作
 
 - 安装docker
 - 安装docker-compose
 - 下载[atlassian-agent-v1.2.3](https://gitee.com/pengzhile/atlassian-agent/attach_files/283102/download)破解工具
 
-### 二、创建docker-compose项目
+### 创建docker-compose项目
 
 1. 创建一个文件夹存放
 
@@ -71,7 +71,7 @@ mkdir my_bussniss_service
     └── init.sql ------------------- jira和confluence初始化sql
 ```
 
-### 三、mysql
+### mysql
 
 #### Dockerfile
 
@@ -111,7 +111,7 @@ innodb_log_file_size=2G
 transaction-isolation=READ-COMMITTED
 ```
 
-### 四、Jira
+### Jira
 
 #### Dockerfile
 
@@ -135,7 +135,7 @@ COPY "atlassian-agent.jar" /opt/atlassian/jira/
 RUN echo 'export CATALINA_OPTS="-javaagent:/opt/atlassian/jira/atlassian-agent.jar ${CATALINA_OPTS}"' >> /opt/atlassian/jira/bin/setenv.sh
 ```
 
-### 五、Confluence
+### Confluence
 
 #### Dockerfile
 
@@ -153,7 +153,7 @@ COPY "atlassian-agent.jar" /opt/atlassian/confluence/
 RUN echo 'export CATALINA_OPTS="-javaagent:/opt/atlassian/confluence/atlassian-agent.jar ${CATALINA_OPTS}"' >> /opt/atlassian/confluence/bin/setenv.sh
 ```
 
-### 六、docker-compose.yml
+### docker-compose.yml
 
 ```yml
 version: '3.6'
@@ -231,7 +231,7 @@ networks:
     driver: bridge
 ```
 
-###  七、编译
+###  编译
 
 #### 执行编译。
 
@@ -261,7 +261,7 @@ mysql -uroot -p
 source /root/init.sql;
 ```
 
-### 八、破解
+### 破解
 
 建议先执行以下jar包看下可以使用的参数，实际使用主要就是`-p`和`-s`，Jira和Confluence大同小异
 
@@ -313,7 +313,7 @@ docker exec mbs_confluence java -jar /opt/atlassian/confluence/atlassian-agent.j
     -s ABCD-EFGH-HIJK-LMNO # 替换为页面上显示的server id
 ```
 
-### 九、常用命令
+### 常用命令
 
 1. 关闭并删除容器重新创建。如果是想重新build，注意删掉对应data下挂载数据卷的目录，下次build会自动创建。
 
@@ -327,7 +327,7 @@ docker-compose down
 docker-compose restart/stop/start
 ```
 
-### 十、注意事项
+### 注意事项
 
 我自己的docker的配置是给了i5的3个核心，8G内存，刚开始只给4G内存gitlab起不来。
 
