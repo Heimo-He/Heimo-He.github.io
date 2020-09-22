@@ -335,7 +335,7 @@ docker-compose restart/stop/start
 
 **3. Jira会出现启动进度条，Confluence会转圈，Gitlab会报错，等Jira启动完毕了，差不多Confluence和Gitlab也就可以访问了。**
 
-**4.机器内存和cpu不够不建议一起编译，会起飞。**
+**4. 机器内存和cpu不够不建议一起编译，会起飞。**
 
 
 
