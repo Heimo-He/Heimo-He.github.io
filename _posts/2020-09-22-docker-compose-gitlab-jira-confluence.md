@@ -1,5 +1,5 @@
 ---
-title: Docker compose构建Gitlab Jira Confluence
+title: Docker compose构建Gitlab Jira Confluence及破解
 categories: Docker
 tags:
  - Docker
