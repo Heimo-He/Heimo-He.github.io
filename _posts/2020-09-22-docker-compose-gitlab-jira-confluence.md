@@ -33,13 +33,13 @@ gitlab也不使用这里的mysql服务，比较独立，很吃内存，mysql可�
 
 ### 创建docker-compose项目
 
-1. 创建一个文件夹存放
+1.创建一个文件夹存放
 
 ```shell
 mkdir my_bussniss_service
 ```
 
-2. 在该目录下创建如下文件夹及文件
+2.在该目录下创建如下文件夹及文件
 
 ```
 .
@@ -85,8 +85,8 @@ COPY "init.sql" /root/
 #### init.sql
 
 注意
-1. jira使用utf8mb4，confluence使用utf8
-2. mysql5.7+创建外键需要`REFERENCES`权限，5.6不需要
+1.jira使用utf8mb4，confluence使用utf8
+2.mysql5.7+创建外键需要`REFERENCES`权限，5.6不需要
 
 ```sql
 CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;
@@ -242,13 +242,13 @@ docker-compose up --build -d #后台执行
 
 #### 初始化Jira和Confluence数据库和用户权限
 
-1. 进入mysql容器
+1.进入mysql容器
 
 ```shell
 docker exec -it mbs_mysql shell
 ```
 
-2. 连接mysql
+2.连接mysql
 
 ```shell
 mysql -uroot -p
@@ -315,13 +315,13 @@ docker exec mbs_confluence java -jar /opt/atlassian/confluence/atlassian-agent.j
 
 ### 常用命令
 
-1. 关闭并删除容器重新创建。如果是想重新build，注意删掉对应data下挂载数据卷的目录，下次build会自动创建。
+1.关闭并删除容器重新创建。如果是想重新build，注意删掉对应data下挂载数据卷的目录，下次build会自动创建。
 
 ```shell
 docker-compose down
 ```
 
-2. 只重启/停止/启动容器
+2.只重启/停止/启动容器
 
 ```shell
 docker-compose restart/stop/start
