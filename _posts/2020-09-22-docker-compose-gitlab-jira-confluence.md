@@ -255,7 +255,7 @@ mysql -uroot -p
 # 输入密码
 ```
 
-3. 加载sql
+3.加载sql
 
 ```sql
 source /root/init.sql;
