@@ -286,7 +286,7 @@ services:
     volumes:
       - ./data/nginx/conf.d/:/etc/nginx/conf.d
       - ./data/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./data/nginx/log/nginx_error.log:/var/log/nginx/error.log
+      - ./data/nginx/log/error.log:/var/log/nginx/error.log
       - ./data/nginx/log/access.log:/var/log/nginx/access.log
 
 networks:
