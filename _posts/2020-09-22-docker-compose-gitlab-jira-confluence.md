@@ -62,19 +62,17 @@ mkdir my_bussniss_service
 │   │   ├── logs
 │   │   └── var
 │   └── nginx
-│       ├── conf.d
-│       ├── logs
-│       │   ├── access.log --------- 手动创建
-│       │   └── error.log ---------- 手动创建
-│       └── nginx.conf
+│   │   ├── conf.d
+│   │   ├── logs
+│   │   │   ├── access.log --------- 手动创建
+│   │   │   └── error.log ---------- 手动创建
+│   │   └── nginx.conf
 │   └── mysql
 │       ├── backup ----------------- 备份位置
 │       ├── conf.d
 │       │   └── my.cnf ------------- 需要修改的mysql配置
-│       └── data
-├── mysql
-│   ├── Dockerfile ----------------- mysql的dockerfile
-│   └── init.sql ------------------- jira和confluence初始化sql
+│       ├── data
+│       └── init.sql --------------- jira和confluence初始化sql=
 ├── jira
 │   ├── Dockerfile ----------------- jira的dockerfile
 │   └── atlassian-agent.jar -------- 下载好的jar包
@@ -120,15 +118,6 @@ mkdir my_bussniss_service
 
 ### mysql
 
-#### Dockerfile
-
-这里使用官方镜像的5.7版本
-
-```dockerfile
-FROM mysql:5.7
-COPY "init.sql" /root/
-```
-
 #### init.sql
 
 注意
@@ -137,10 +126,13 @@ COPY "init.sql" /root/
 
 ```sql
 CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;
-GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,ALTER,INDEX on confluence.* TO 'confluence'@'%' IDENTIFIED BY 'confluence';
+-- mysql5.6，无需REFERENCES权限，使用内网ip地址和安全性高的密码
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER,INDEX,REFERENCES on confluence.* TO 'confluence'@'%' IDENTIFIED BY '复杂的密码';
 flush privileges;
+
 CREATE DATABASE jira CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
-GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,ALTER,INDEX on jira.* TO 'jira'@'%' IDENTIFIED BY 'jira';
+-- mysql5.6，无需REFERENCES权限，使用内网ip地址和安全性高的密码
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER,INDEX,REFERENCES on jira.* TO 'jira'@'%' IDENTIFIED BY '复杂的密码';
 flush privileges;
 ```
 
@@ -227,7 +219,7 @@ services:
       - ./data/gitlab/log:/var/log/gitlab/
 
   mysql:
-    build: ./mysql
+    image: mysql:5.6
     container_name: mbs_mysql
     restart: always
     networks:
@@ -308,7 +300,7 @@ docker-compose up --build -d #后台执行
 1.进入mysql容器
 
 ```shell
-docker exec -it mbs_mysql shell
+docker exec -it mbs_mysql bash
 ```
 
 2.连接mysql
