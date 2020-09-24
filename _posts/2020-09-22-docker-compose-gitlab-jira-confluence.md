@@ -148,6 +148,7 @@ innodb_large_prefix=ON
 innodb_file_format=Barracuda
 innodb_log_file_size=2G
 transaction-isolation=READ-COMMITTED
+max_allowed_packet=256M
 ```
 
 ### Jira
