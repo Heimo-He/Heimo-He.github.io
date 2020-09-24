@@ -14,12 +14,17 @@ tags:
 - **jira**:8.1.0
 - **confluence**:7.7.3
 - **mysql**:5.7
+- **nginx**:latest
 
 生产部署考虑gitlab和mysql独立出去，不和atlassian家的这俩服务放一起。
 
 gitlab也不使用这里的mysql服务，比较独立，很吃内存，mysql可以用rds云数据库。
 
-接下来的工作只是构建和破解，实际生产部署则按需修改。
+接下来的工作只是构建和破解，用于测试，实际生产部署则按需修改。
+
+我自己的docker的配置是给了i5的3个核心，8G内存，刚开始只给4G内存gitlab起不来。
+
+实际没有其它容器的情况下docker吃掉了我15个G的内存，而且是编译完容器运行的时候，可能更多的是macos的内存使用机制导致的。
 
 
 <!-- more -->
@@ -30,8 +35,7 @@ gitlab也不使用这里的mysql服务，比较独立，很吃内存，mysql可�
 - 安装docker
 - 安装docker-compose
 - 下载[atlassian-agent-v1.2.3](https://gitee.com/pengzhile/atlassian-agent/attach_files/283102/download)破解工具
-
-### 创建docker-compose项目
+- 创建docker-compose项目
 
 1.创建一个文件夹存放
 
@@ -57,19 +61,62 @@ mkdir my_bussniss_service
 │   ├── jira
 │   │   ├── logs
 │   │   └── var
+│   └── nginx
+│       ├── conf.d
+│       ├── logs
+│       │   ├── access.log --------- 手动创建
+│       │   └── error.log ---------- 手动创建
+│       └── nginx.conf
 │   └── mysql
 │       ├── backup ----------------- 备份位置
 │       ├── conf.d
 │       │   └── my.cnf ------------- 需要修改的mysql配置
 │       └── data
-├── docker-compose.yml ------------- 主要的docker-compose文件
+├── mysql
+│   ├── Dockerfile ----------------- mysql的dockerfile
+│   └── init.sql ------------------- jira和confluence初始化sql
 ├── jira
 │   ├── Dockerfile ----------------- jira的dockerfile
 │   └── atlassian-agent.jar -------- 下载好的jar包
-└── mysql
-    ├── Dockerfile ----------------- mysql的dockerfile
-    └── init.sql ------------------- jira和confluence初始化sql
+└── docker-compose.yml ------------- 主要的docker-compose文件
 ```
+
+### 二、配置Nginx代理
+
+因为走的是docker的network，所以注意转发地址是和docker-compose.yml中的network别名相同，对应server_name的hosts配置这里就不写了。
+
+通过Nginx对外开放一个80做代理，docker的容器不暴露出来。如果不在意这部分，可以抛弃掉Nginx。直接宿主机访问ports映射的端口。
+
+```nginx
+...
+
+    server {
+        listen 80;
+        server_name git.com;
+        location / {
+            proxy_pass http://gitlab; # network别名
+        }
+    }
+
+    server {
+        listen 80;
+        server_name jira.com;
+        location / {
+            proxy_pass http://jira:8080; # network别名和expose的端口
+        }
+    }
+
+    server {
+        listen 80;
+        server_name wiki.com;
+        location / {
+            proxy_pass http://confluence:8090; # network别名和expose的端口
+        }
+    }
+
+...
+```
+
 
 ### mysql
 
@@ -172,10 +219,8 @@ services:
       mbs-net:
         aliases:
           - gitlab
-    ports:
-      - 80:80
-      # - 443:443
-      # - 22:22
+    expose:
+      - 80
     volumes:
       - ./data/gitlab/config:/etc/gitlab/
       - ./data/gitlab/opt:/var/opt/gitlab/
@@ -189,8 +234,8 @@ services:
       mbs-net:
         aliases:
           - mysql
-    ports:
-      - 3306:3306
+    expose:
+      - 3306
     environment:
       MYSQL_ROOT_PASSWORD: 123456 # mysql初始密码
     volumes:
@@ -206,8 +251,8 @@ services:
         mbs-net:
           aliases:
             - jira
-    ports:
-        - 8080:8080
+    expose:
+      - 8080
     volumes:
         - ./data/jira/var/:/var/atlassian/jira/
         - ./data/jira/logs/:/opt/atlassian/jira/logs/
@@ -220,11 +265,29 @@ services:
       mbs-net:
         aliases:
           - confluence
-    ports:
-      - 8090:8090
+    expose:
+      - 8090
     volumes:
       - ./data/confluence/var/:/var/atlassian/confluence/
       - ./data/confluence/logs/:/opt/atlassian/confluence/logs/
+
+  nginx:
+    container_name: ss_nginx
+    image: nginx:latest
+    restart: always
+    networks:
+      mbs-net:
+        aliases:
+          - nginx
+    expose:
+      - 80
+    ports:
+      - 80:80
+    volumes:
+      - ./data/nginx/conf.d/:/etc/nginx/conf.d
+      - ./data/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./data/nginx/log/nginx_error.log:/var/log/nginx/error.log
+      - ./data/nginx/log/access.log:/var/log/nginx/access.log
 
 networks:
   mbs-net:
